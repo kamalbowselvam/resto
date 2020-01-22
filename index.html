@@ -18,7 +18,8 @@
             var socket = io.connect('http://localhost:8080');
 
             socket.on('userid', function(userid) {
-                $('#name').html(userid)
+                console.log(userid)
+                $('#name').text(userid['topic'])
             })
 
             $('#poke').click(function () {
